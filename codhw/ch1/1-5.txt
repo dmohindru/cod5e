@@ -30,14 +30,26 @@ b. execution time = no. of inst * clock cycle per inst * time per clock cycle
 
 
 c. 
-   execution time = no. of inst * clock cycle per inst / clock rate
-   clock rate = no. of inst * clock cycle per inst / exection time
-   clock rate = no. of inst * clock cycle per inst * exection time * 10 ^ -1
+  execution time = no. of inst * clock cycle per inst / clock rate
+  clock rate = no of. inst * clock cycle per inst / execution time
 
-   clock rate 1 = 1.2 * CPI * execution time
-                ----------------------------
-                  CPI * 
+  P1: 
+  no of inst = 20 * 10^9 
+  new clock cycle per inst = 1.5 * 1.2 = 1.8
+  new execution time = 7 second
+  new clock rate = 20 * 10^9 * 1.8 / 7 = 5.14 Ghz
 
+  P2:
+  no of inst = 25 * 10^9
+  new clock cycle per inst = 1.0 * 1.2 = 1.2
+  new execution time = 7 second
+  new clock rate = 25 * 10^9 * 1.2 / 7 = 4.28 Ghz
+
+  P3:
+  no of inst = 18.18 * 10^9
+  new clock cycle per inst = 2.2 * 1.2 = 2.6
+  new execution time = 7 second
+  new clock rate = 18.18 * 10^9 * 2.64 / 7 = 6.75 Ghz
 
    
 
