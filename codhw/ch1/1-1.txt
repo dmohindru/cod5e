@@ -1,0 +1,4 @@
+a. Server computer
+b. Embedded computer
+c. Desktop/laptop computer
+4. Super computer

@@ -1,0 +1,43 @@
+P1: clock - 3 GHz, CPI - 1.5
+P2: clock - 2.5 GHz, CPI - 1.0
+P1: clock - 4 GHz, CPI - 2.2
+
+a. Instruction per second (MIPS)
+P1: 3.0 * 10^9 / 1.5 = 2.0  billion instruction per second = 2.0 * 10^9
+P2: 2.5 * 10^9 / 1.0 = 2.5  billion instruction per second = 2.5 * 10^9
+P3: 4.0 * 10^9 / 2.2 = 1.81 billion instruction per second = 1.81 * 10^9
+
+P2 has highest performance expressed in instruction per second
+
+b. execution time = no. of inst * clock cycle per inst * time per clock cycle
+   execution time = no. of inst * clock cycle per inst / clock rate
+   no. of inst = execution time * clock rate / clock cycle per inst  --------> eq1
+   no. of clock cycle = no. of inst * clock cycle per inst --------> eq2
+
+   substuting eq1, eq2 with paramter for P1, P2, P3 --------> eq 1
+
+   P1: 
+   no of inst = 10 * 3.0 * 10^9 / 1.5 = 20 * 10^9 = 20 billion instruction = 20 * 10^9
+   no of clock cycle = 20 * 10^9 * 1.5 = 30 * 10^9 = 30 billion clock cycles = 30 * 10^9
+
+   P2: 
+   no of inst = 10 * 2.5 * 10^9 / 1.0 = 20 * 10^9 = 25 billion instruction = 25 * 10^9
+   no of clock cycle = 25 * 10^9 * 1.0 = 25 * 10^9 = 25 billion clock cycles = 25 * 10^9
+
+   P3: 
+   no of inst = 10 * 4 * 10^9 / 2.2 = 18.18 * 10^9 = 18.18 billion instruction = 18.18 * 10^9
+   no of clock cycle = 18.18 * 10^9 * 2.2 = 40 * 10^9 = 40 billion clock cycles = 40 * 10^9
+
+
+c. 
+   execution time = no. of inst * clock cycle per inst / clock rate
+   clock rate = no. of inst * clock cycle per inst / exection time
+   clock rate = no. of inst * clock cycle per inst * exection time * 10 ^ -1
+
+   clock rate 1 = 1.2 * CPI * execution time
+                ----------------------------
+                  CPI * 
+
+
+   
+

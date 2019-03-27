@@ -1,0 +1,17 @@
+a. Assembly line in automobile manufacturing - Performance via Pipelining
+
+b. Suspension bridge cables - Dependability via Redundancy
+
+c. Aircraft and marine navigation system that incorporate wind information - Performance via Prediction
+
+d. Express elevators in building - Make the Common Cast Fast
+
+e. Library reserve desk - Hierarchy of Memories
+
+f. Increase the gate area on a CMOS transistor to decrease its switching time - Performance via Parallelism
+
+g. Adding electromagnetic aircraft catapults (which are electrically - powered as opposed to current steam - powered
+   models), allowed by the increased power generation offered by the new reactor technology - Design for Moore's Law
+
+h. Building self-driving cars whose controls system partially rely on existing sensor system already installed into the base
+   vehicle, such as lane departure systems and smart cruise control system - Use Abstraction to Simplify Design

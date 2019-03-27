@@ -1,0 +1,6 @@
+1. There is a high level language program such a C language.
+
+2. Then compiler compiles C language program to assembly level program.
+
+3. Then assembler assemble the assembly level program to machine level program which
+   can be directly executed by computer processor.
