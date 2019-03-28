@@ -1,0 +1,35 @@
+Compiler A:
+    Inst. count    = 1.0E9
+    Execution time = 1.1 sec
+
+Compiler B:
+    Inst. count    = 1.2E9
+    Execution time = 1.5 sec
+
+a.
+    Processor Clock cycle = 1 ns = 1E-9 = 1 Ghz
+    exec. time = inst. count * CPI * clock cycle
+    CPI = exec. time / (inst. count * clock cycle)
+    
+    CPI Compiler A = 1.1 / (1.0E9 * 1.0E-9) = 1.1
+    CPI Compiler B = 1.5 / (1.2E9 * 1.0E-9) = 1.25
+    (I doubt this answer)
+
+b. clock cycle = exec. time / (inst. count * CPI)
+   clock rate = (inst. count * CPI) / exec. time
+   clock rate-B/clock rate-A = (inst. count-B * CPI-B) / (inst. count-A * CPI-A)
+   clock rate-B/clock rate-A = 1.2E9 * 1.25 / (1.0E9 * 1.1) = 1.36 times
+
+c. 
+   New Compiler:
+   Inst. count = 6.0E8
+   Avg. CPI = 1.1
+
+   execution time = 6.0E8 * 1.1 * 1.0E-9 = 0.66 Sec
+   Speed up with comp. to compiler A = 1.1 / 0.66 = 1.67 times (40.00% speed up)
+   Speed up with comp. to compiler B = 1.5 / 0.66 = 2.27 times (51.33% speed up)
+
+
+
+
+

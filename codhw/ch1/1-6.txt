@@ -1,0 +1,42 @@
+P1:
+    Clock: 2.5 Ghz
+    CPI-A: 1
+    CPI-B: 2
+    CPI-C: 3
+    CPI-D: 3
+
+P2:
+    Clock: 3.0 Ghz
+    CPI-A: 2
+    CPI-B: 2
+    CPI-C: 2
+    CPI-D: 2
+
+a. A: 10% , B: 20%, C: 50%, D: 20%
+
+Global CPI for P1 = (0.1 * 1) + (0.2 * 2) + (0.5 * 3) + (0.2 * 3) = 0.1 + 0.4 + 1.5 + 0.6 = 2.6
+
+Global CPI for P1 = (0.1 * 2) + (0.2 * 2) + (0.5 * 2) + (0.2 * 2) = 0.2 + 0.4 + 1.0 + 0.4 = 2.0
+
+b. Total instruction         = 1 000 000 
+   Class A instruction (10%) =   100 000
+   Class B instruction (20%) =   200 000
+   Class C instruction (50%) =   500 000
+   Class D instruction (20%) =   200 000
+
+   P1: 
+   Total cycle: (1*10^5*1) + (2*10^5*2) + (5*10^5*3) + (2*10^5*3) = (1 + 4 + 15 + 6) * 10^5 = 26 * 10^5 cycles
+
+   P2: 
+   Total cycle: (1*10^5*2) + (2*10^5*2) + (5*10^5*2) + (2*10^5*2) = (2 + 4 + 10 + 4) * 10^5 = 20 * 10^5 cycles
+
+   Total execution time for
+   P1: 
+   26 * 10^5 / 2.5 * 10^9 = 10.4 * 10^-4 sec
+
+   P2: 
+   20 * 10^5 / 3.0 * 10^9 = 6.66 * 10^-4 sec
+   
+   so by comparing execution time of a program clearly P2 is a faster implementation.
+
+
