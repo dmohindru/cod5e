@@ -20,3 +20,31 @@ C = 2 * 90 / 1.25*1.25 * 3.6E9 = 3.2E-8F
 Core i5 Ivy Bridge:
 C = 2 * 40 / 0.9*0.9 * 3.4E9 = 2.9E-8F
 
+b.
+Total power consumed = static power + dynamic power
+Pentinum 4 Prescott:
+Total power = 10 + 90 = 100W
+static power percentage = 10/100 = 10%
+
+Core i5 Ivy Bridge:
+Total power = 30 + 40 = 70W
+static power percentage = 30/70 = 42.9%
+
+c.
+voltage = (power * 2 / capacitive load * frequency switched) ^ 0.5
+
+Pentinum 4 Prescott:
+new dynamic power = 90 * 0.9 = 81W
+capacitive load = 3.2E-8F
+frequency switched = 3.6E9
+voltage = (81 * 2/ 3.2E-8 * 3.6E9)^0.5 = (162 / 115.2)^0.5 = 1.18V
+
+Core i5 Ivy Bridge:
+new dynamic power = 40 * 0.9 = 36W
+capacitive load = 2.9E-8F
+frequency switched = 3.4E9
+voltage = (36 * 2/ 2.9E-8 * 3.4E9)^0.5 = (72 / 98.6)^0.5 = 0.85V
+
+
+
+
