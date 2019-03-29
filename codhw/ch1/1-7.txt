@@ -13,7 +13,7 @@ a.
     
     CPI Compiler A = 1.1 / (1.0E9 * 1.0E-9) = 1.1
     CPI Compiler B = 1.5 / (1.2E9 * 1.0E-9) = 1.25
-    (I doubt this answer)
+    
 
 b. clock cycle = exec. time / (inst. count * CPI)
    clock rate = (inst. count * CPI) / exec. time
