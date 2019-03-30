@@ -31,20 +31,43 @@ Total power = 30 + 40 = 70W
 static power percentage = 30/70 = 42.9%
 
 c.
-voltage = (power * 2 / capacitive load * frequency switched) ^ 0.5
+
+
+(S_new + D_new) / (S_old + D_old) = 0.90 -------> eq1
+
+static power = voltage * current
+current = power / voltage
+Since current has to remain same
+S_new / V_new = S_old / V_old
+S_new = V_new * S_old / V_old  ---------> eq2
+
+dynamic power = V^2 * capacitance (C) * frequency (F)
+from eq1
+D_new = 0.90 * (S_old + D_old) - S_new
+V^2 * C * F = 0.90 * (S_old + D_old) - S_new
+V = [0.90 * (S_old + D_old) - S_new / (C * F)]^1/2 ----------> eq3
 
 Pentinum 4 Prescott:
-new dynamic power = 90 * 0.9 = 81W
-capacitive load = 3.2E-8F
-frequency switched = 3.6E9
-voltage = (81 * 2/ 3.2E-8 * 3.6E9)^0.5 = (162 / 115.2)^0.5 = 1.18V
+from eq 2
+S_new = V_new * 10 / 1.25 = V_new * 8
+S_old + D_old = 10 + 90 = 100
+C * F = 3.2E-8F * 3.6E9 = 115.2
+pluging these value in eq3
+V = [(0.9 * 100) - (8 * V_new) / 115.2]^1/2
+Solving above polynomial we get 
+https://www.symbolab.com/solver/polynomial-equation-calculator
+
+V = 0.85
+
 
 Core i5 Ivy Bridge:
-new dynamic power = 40 * 0.9 = 36W
-capacitive load = 2.9E-8F
-frequency switched = 3.4E9
-voltage = (36 * 2/ 2.9E-8 * 3.4E9)^0.5 = (72 / 98.6)^0.5 = 0.85V
 
+S_new = V_new * 30 / 0.9 = V_new * 33.33
+S_old + D_old = 30 + 40 = 70
+C * F = 2.9E-8F * 3.4E9 = 98.6
+pluging these value in eq3
+V = [(0.9 * 70) - (33.33 * V_new) / 98.6]^1/2
+Solving above polynomial we get 
+https://www.symbolab.com/solver/polynomial-equation-calculator
 
-
-
+V = 0.64

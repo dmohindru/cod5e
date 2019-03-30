@@ -1,0 +1,106 @@
+Exection time (T) = No. of Inst (I) * Clock per inst (CPI) / Clock rate per inst. (C)
+or 
+Exection time (T) = Total Clock cycles / Clock rate per inst. (C)
+Total Clock Cycle = No. of Inst (I) * Clock per inst (CPI)
+
+
+Arthimetic Instruction:
+    No of Inst = 2.56E9
+    CPI        = 1
+
+Load/Store Instruction
+    No of Inst = 1.28E9
+    CPI        = 12
+
+Branch Instruction
+    No of Inst = 0.256E9
+    CPI        = 5
+
+Process clock = 2.0 Ghz
+
+a:
+Exection time on 1 processor
+Total Cycles
+C_arth = 2.56E9 * 1 = 2.56E9
+C_load = 1.28E9 * 12 = 15.36E9
+C_brnh = 0.256E9 * 5 = 1.28E9
+C_total = 19.2E9
+T_total = 19.2E9 / 2.0E9 = 9.6 Sec
+Speed up = 9.6/9.6 = 1
+
+Exection time on 2 processor
+C_arth = 2.56E9/(0.7*2) = 1.83E9
+C_load = 15.36E9/(0.7*2) = 10.97E9
+C_brnh = 1.28E9
+C_total = 14.08E9
+T_total = 7.04 Sec
+Speed up = 9.6/7.04 = 1.36
+
+Exection time on 4 processor
+C_arth = 2.56E9/(0.7*4) = 0.91E9
+C_load = 15.36E9/(0.7*4) = 5.48E9
+C_brnh = 1.28E9
+C_total = 7.67E9
+T_total = 3.84 Sec
+Speed up = 9.6/3.84 = 2.5
+
+Exection time on 8 processor
+C_arth = 2.56E9/(0.7*8) = 0.45E9
+C_load = 15.36E9/(0.7*8) = 2.74E9
+C_brnh = 1.28E9
+C_total = 4.47E9
+T_total = 2.24 Sec
+Speed up = 9.6/2.24 = 4.29
+
+
+b:
+If CPI Arthimetic is double i.e. CPI_arth = 2
+
+Exection time on 1 processor
+Total Cycles
+C_arth = 2.56E9 * 2 = 5.12E9
+C_load = 1.28E9 * 12 = 15.36E9
+C_brnh = 0.256E9 * 5 = 1.28E9
+C_total = 21.76E9
+T_total = 19.2E9 / 2.0E9 = 10.88 Sec
+Relative Slow down = 10.88/9.6 = 1.33
+
+Exection time on 2 processor
+C_arth = 5.12E9/(0.7*2) = 3.66E9
+C_load = 15.36E9/(0.7*2) = 10.97E9
+C_brnh = 1.28E9
+C_total = 15.91E9
+T_total = 7.96 Sec
+Relative Slow down = 7.96/7.04 = 1.13
+
+Exection time on 4 processor
+C_arth = 5.12E9/(0.7*4) = 1.83E9
+C_load = 15.36E9/(0.7*4) = 5.48E9
+C_brnh = 1.28E9
+C_total = 8.59E9
+T_total = 4.30 Sec
+Relative Slow down = 4.30/3.84 = 1.12
+
+Exection time on 8 processor
+C_arth = 5.12E9/(0.7*8) = 0.91E9
+C_load = 15.36E9/(0.7*8) = 2.74E9
+C_brnh = 1.28E9
+C_total = 4.93E9
+T_total = 2.46 Sec
+Relative Slow down = 2.46/2.24 = 1.10
+
+c:
+Total cycles on 4 process = 7.67E9
+C_arth = 2.56E9 * 1 = 2.56E9
+C_load = 1.28E9 * x = 1.28xE9
+C_brnh = 0.256E9 * 5 = 1.28E9
+Therefore
+1.28E9+(1.28*x)E9+2.56E9 = 7.67E9
+1.28*x = 3.83
+x = 3
+So load store CPI = 3 
+
+
+
+
+

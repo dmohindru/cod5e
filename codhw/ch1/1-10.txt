@@ -1,0 +1,30 @@
+Cost per die = Cost per wafer / (Die per wafer * yield)
+
+Die per wafer = (Approx) Wafer area / Die area
+
+Yield = 1/(1 + (Defect per area X Die area/2))^2 
+
+Wafer 1:
+    Dia: 15 cm
+    Area: 176.62cm2
+    Cost: 12
+    dies: 84
+    die area: 2.10
+    defect: 0.020/cm2
+
+Wafer 2:
+    Dia: 20 cm
+    Area: 314cm2
+    Cost: 15
+    dies: 100
+    die area = 3.14cm2
+    defect: 0.031/cm2
+
+a:
+Wafer 1:
+(Defect per area X Die area/2)= ((0.020 * 2.41)/2) = 0.0241
+Yield = 1 / 1.049 = 95.32%
+
+Wafer 2:
+(Defect per area X Die area/2)= ((0.031 * 3.14)/2) = 0.049
+Yield = 1 / 1.10 = 90.90%
