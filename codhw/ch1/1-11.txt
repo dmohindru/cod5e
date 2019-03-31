@@ -1,0 +1,47 @@
+T = I X CPI X C
+
+1.11.1
+CPI = 750 / (2389E9 * 0.333E-9)
+CPI = 0.94
+
+1.11.2
+Spec ratio = 9650 / 750 = 12.86
+
+1.11.3
+T = 1.1 * 2389E9 * 0.94 * 0.333E-9 = 822.58 sec
+
+1.11.4
+T_new = 1.1 * 2389E9 * 0.94 * 1.05 * 0.333E-9 = 866.25 sec
+increase in time = 863.71 / 750 = 1.155 times or 15.5%
+
+1.11.5
+Spec ratio = 9650 / 866.25 = 11.14
+change in spec ratio = 11.14 / 12.86 = 0.86 times or decrease by 14%
+
+1.11.6
+2389E9*0.85 * CPI / 4.00E9 = 700
+CPI = 1.37
+
+1.11.7
+increase clock rate = 4 / 3 = 1.33
+increase CPI = 1.37 / 0.94 =    1.45
+Yes they are dissimilar. As increase in CPI has no relation to clock rate, but implemenation.
+or
+They are different because, although the number of instructions has been
+reduced by 15%, the CPU time has been reduced by a lower percentage.
+
+1.11.8
+reduced cpu time = 700 / 750 = 0.9333 times or 6.7%
+
+1.11.9
+I * 1.61 / 4.00E9 = 960E-9 * 0.9
+I = 2146.58 instructions
+
+1.11.10
+clock rate old = no of inst X CPI / CPU time
+clock rate new = no of inst X CPI / CPU time * 0.90 = clock rate old  / 0.9
+clock rate new = 3 / 0.9 = 3.33 Ghz
+
+1.11.11
+clock rate new = no of inst X CPI X 0.85 / (CPU time X 0.80)
+clock rate new = clock rate old X 0.85 / 0.80 = 3.18 Ghz

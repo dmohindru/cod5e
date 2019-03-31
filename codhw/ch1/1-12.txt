@@ -1,0 +1,45 @@
+P1:
+    Instruction: 5.0E9
+    CPI        : 0.9
+    Clock      : 4 Ghz
+
+P2:
+    Instruction: 1.0E9
+    CPI        : 0.75
+    Clock      : 3 Ghz
+
+1.12.1
+execution time P1 = 5.0E9 * 0.9 / 4.0E9 = 1.125 sec
+execution time P2 = 1.0E9 * 0.75 / 3.0E9 = 0.25 sec
+
+comparing execution time clear P2 has a better performance even tough
+it has a lower clock rate than P1
+
+1.12.2
+Instruction: 1.0E9
+execution time for P1 = 1.0E9 * 0.9 / 4.0E9 = 0.225 sec
+
+No of Instruction executed by P2 in 0.225 sec
+I = 0.225 * 3.0E9 / 0.75 = 0.9E9 Instruction
+
+1.12.3
+MIPS = (Clock rate / CPI) / 1E6
+
+P1:
+MIPS = 4444.44
+
+P2:
+MIPS = 4000.00
+
+MIPS rating of P1 is higher than P2, but performance of P2 is higher than P1
+
+1.12.4
+P1:
+FP operation = 5.0E9 * 0.4 = 2.0E9
+MFLOPS = 2.0E9 / 1.125 * 1E6 = 1.78E3
+
+P2:
+FP operation = 1.0E9 * 0.4 = 0.4E9
+MFLOPS = 0.4E9 / 0.25 * 1E6 = 1.6E3
+
+MFLOPS rating of P1 is greater than P2, but performance of P2 is greater than P1

@@ -20,7 +20,7 @@ Wafer 2:
     die area = 3.14cm2
     defect: 0.031/cm2
 
-a:
+1.10.1:
 Wafer 1:
 (Defect per area X Die area/2)= ((0.020 * 2.41)/2) = 0.0241
 Yield = 1 / 1.049 = 95.32%
@@ -28,3 +28,39 @@ Yield = 1 / 1.049 = 95.32%
 Wafer 2:
 (Defect per area X Die area/2)= ((0.031 * 3.14)/2) = 0.049
 Yield = 1 / 1.10 = 90.90%
+
+1.10.2:
+cost per die = Cost of wafer / (no of die * yield)
+
+Wafer 1:
+cost per die = 12 / 84 * 0.9532 = 0.15
+
+Wafer 2:
+cost per die = 15 / 100 * 0.909 = 0.16
+
+1.10.3:
+Wafer 1:
+new no of dies = 92.4
+new defect per area = 0.022/cm2
+die area = 3.14*7.5*7.5/92.4 = 1.92
+Yield = 95.75%
+
+Wafer 2:
+new no of dies = 110
+new defect per area = 0.0341/cm2
+die area = 3.14*10*10/110 = 2.85
+Yield = 90.82%
+
+1.10.4:
+From above yield equation
+defect = ((1/yield)^1/2 - 1) * (2 / die area)
+
+yield1 = 0.92
+yield2 = 0.95
+die ared = 2
+
+for yield1
+defect = 0.043/cm2
+
+for yield2
+defect = 0.026/cm2
