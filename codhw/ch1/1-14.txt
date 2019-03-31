@@ -1,0 +1,31 @@
+INT instruction = 110E6
+FP  instruction =  50E6
+L/S instruction =  80E6
+BR  instruction =  16E6
+
+INT CPI = 1
+FP  CPI = 1
+L/S CPI = 4
+BR  CPI = 2
+
+clock = 2 Ghz
+
+Clock Cycle total = 110E6 + 50E6 + 320E6 + 32E6 = 512E6
+T_cpu = 512E6/2.0E9 = 0.256 s
+
+14.1.1
+New clock cycles = 512E6/2
+50E6 X CPI_fp = 256E6 - 110E6 - 320E6 - 32E6
+CPI_fp = -206E6/50E6 (-ve answer, so not possible)
+
+
+1.14.2
+New clock cycles = 256E6
+80E6 X CPI_ls = 256E6 - 110E6 - 50E6 - 32E6
+CPI_ls = 64E6 / 80E6 = 0.8
+Improvement needed = 80%
+
+1.14.3
+New Clock Cycle = 110E6 X 0.6 X 1  + 50E6 X 0.6 X 1 + 80E6 X 0.7 X 4 + 16E X 0.7 X 2
+New Clock Cycle = 66E6 + 30E6 + 224E6 + 22.4E6 = 342.4E6
+Improvement = 33.12%

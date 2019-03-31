@@ -1,0 +1,24 @@
+Total time      = 250 s
+FP instuction   =  70 s
+LS instuction   =  85 s
+BR instuction   =  40 s
+INT instuction  =  55 s
+
+1.13.1
+New time = FP(56) + LS(85) + BR(40) + INT(55)
+New time = 236 s
+Time reduction = 236 / 250 = 0.94 times
+
+
+1.13.2
+New time = 250 * 0.8 = 200
+FP(70) + LS(85) + BR(40) + INT = 200
+INT = 5
+Time reduction = 55 - 5 = 50 s or 90.9%
+
+1.13.3
+New time = 200
+FP(70) + LS(85) + BR + INT(55) = 200
+BR = -10 -ve number not possible
+So we cannot reduce total time by 20% by only reducing time for branch instructions
+

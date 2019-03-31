@@ -1,0 +1,64 @@
+ideal speed up = t/p
+actual speed up = t/p + 4
+
+1 Processor time = 100 s
+
+2 Processor
+t_acutal = 100/2 + 4 = 54
+t_ideal = 100/2 = 50    
+speedup_acutal = 100 / 54 = 1.85
+speedup_ideal = 100 / 50 = 2
+speedup_acutal/speedup_ideal = 1.85 / 2 = 0.93
+
+4 Processor
+t_acutal = 100/4 + 4 = 29
+t_ideal = 100/4 = 25    
+speedup_acutal = 100 / 29 = 3.45
+speedup_ideal = 100 / 25 = 4
+speedup_acutal/speedup_ideal = 3.45 / 4 = 0.86
+
+8 Processor
+t_acutal = 100/8 + 4 = 16.5
+t_ideal = 100/8 = 12.5    
+speedup_acutal = 100 / 16.5 = 6.06
+speedup_ideal = 100 / 12.5 = 8
+speedup_acutal/speedup_ideal = 6.06 / 8 = 0.76
+
+16 Processor
+t_acutal = 100/16 + 4 = 10.25
+t_ideal = 100/16 = 6.25    
+speedup_acutal = 100 / 10.25 = 9.76
+speedup_ideal = 100 / 6.25 = 16
+speedup_acutal/speedup_ideal = 9.76 / 16 = 0.61
+
+32 Processor
+t_acutal = 100/32 + 4 = 7.125
+t_ideal = 100/32 = 3.125    
+speedup_acutal = 100 / 7.125 = 14.03
+speedup_ideal = 100 / 3.125 = 32
+speedup_acutal/speedup_ideal = 14.03 / 32 = 0.44
+
+64 Processor
+t_acutal = 100/64 + 4 = 5.56
+t_ideal = 100/64 = 1.56    
+speedup_acutal = 100 / 5.56 = 18.00
+speedup_ideal = 100 / 1.56 = 64
+speedup_acutal/speedup_ideal = 18.00 / 64 = 0.28
+
+128 Processor
+t_acutal = 100/128 + 4 = 4.78
+t_ideal = 100/128 = 0.78    
+speedup_acutal = 100 / 4.78 = 20.92
+speedup_ideal = 100 / 0.78 = 128
+speedup_acutal/speedup_ideal = 20.92 / 128 = 0.16
+
+
+
+
+
+
+
+
+
+
+
