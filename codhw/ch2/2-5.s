@@ -1,7 +1,7 @@
 # Solution for ex 2-5
 # B[g] = A[f] + A[f+1]
 # A: $s6, B: $s7, f: $s0
-
+main:
 sll     $t0, $s0, 2     # $t0 = f * 4
 add		$t0, $s6, $t0	# $t0 = &A[f]
 sll     $t1, $s1, 2     # $t1 = g * 4
