@@ -1,0 +1,3 @@
+Solution for ex 2-4
+
+B[g] = A[f] + A[f+1];

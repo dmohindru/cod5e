@@ -1,0 +1,3 @@
+Solution for ex 2-2
+
+f = g + h + i
