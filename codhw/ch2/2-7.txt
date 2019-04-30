@@ -1,0 +1,14 @@
+Little Endian
+Mem         Data
+0           12
+8           ef
+16          cd
+24          ab
+
+Big Endian
+Mem         Data
+0           ab
+8           cd
+16          ef
+24          12
+

@@ -1,0 +1,20 @@
+2-6-1
+temp = Array[0];
+Array[0] = Array[4];
+temp1 = Array[1];
+Array[1] = temp;
+temp = Array[3];
+Array[3] = temp1;
+Array[4] = temp;
+
+2-6-2
+Array: s6
+MIPS Code
+lw $t0, 0($s6)
+lw $t2, 16($s6)
+sw $t2, 0($s6)
+lw $t1, 4($s6)
+sw $t0, 4($s6)
+lw $t0, 12($s6)
+sw $t1, 12($s6)
+sw $t0, 16($s6)
