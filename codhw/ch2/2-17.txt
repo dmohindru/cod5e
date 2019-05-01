@@ -1,0 +1,14 @@
+op=0x23, rs=1, rt=2, const=0x4
+
+Instuction format: I-Type
+
+Instuction
+lw $v0, 4($at)
+
+Instuction Endoding
+Op: 100011
+rs: 00001
+rt: 00010
+im: 0000000000000100
+
+0x8C220004

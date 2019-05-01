@@ -1,0 +1,16 @@
+000000 10000 10000 10000 00000 100000
+
+op code: 000000
+Instruction type: R-type
+
+rs = 10000
+rt = 10000
+rd = 10000
+
+shamt = 00000
+
+funct = 100000
+
+hence Instruction
+
+add $s0, $s0, $s0

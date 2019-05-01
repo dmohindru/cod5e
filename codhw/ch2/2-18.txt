@@ -1,0 +1,24 @@
+2-18-1
+R-Type Instruction format
+OpCode : 8 bits
+rs: 7 bits
+rt: 7 bits
+rd: 7 bits
+shAmt: 5 bits
+func: 6 bits
+
+Total: 40 bits
+
+2-18-2
+I-Type Instruction format
+OpCode : 8 bits
+rs: 7 bits
+rt: 7 bits
+
+2-18-3
+With more instruction set a complex program would require fewer
+instruction to accomplish its task.
+
+But as number of bits in each instruction would increase. A simple
+program would have required more memory than it would be required
+in old encoding. 

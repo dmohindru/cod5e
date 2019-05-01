@@ -1,0 +1,15 @@
+op=0, rs=3, rt=2, rd=3, shamt=0, funct=34
+
+Instruction Format : R-Type
+
+Instruction:
+sub $v1, $v1, $v0
+
+Instructon encoding
+Op: 000000
+rs: 00011
+rt: 00010
+rd: 00011
+sh: 00000
+fn: 100010
+0x00621822

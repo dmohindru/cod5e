@@ -1,0 +1,41 @@
+2-11
+addi $t0, $s6, 4
+Format: I-Type
+op:     8
+rs:     s6 (22)
+rt:     t0 (8)
+immi:   4
+
+add $t1, $s6, $0
+Format: R-Type
+op:     0
+rs:     s6 (22)
+rt:     0  (0)
+rd:     t1 (9)
+shamt:  0
+func:   32
+
+
+sw $t1, 0($t0)
+Format: I-Type
+op:     43
+rs:     t0 (8)
+rt:     t1 (9)
+immi:   0
+
+lw $t0, 0($t0)
+Format: I-Type
+op:     35
+rs:     t0 (8)
+rt:     t0 (8)
+immi:   0
+
+
+add $s0, $t1, $t0
+Format: R-Type
+op:     0
+rs:     t1 (9)
+rt:     t0 (8)
+rd:     s0 (16)
+shamt:  0
+func:   32

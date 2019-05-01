@@ -1,0 +1,16 @@
+addi $t0, $s6, 4
+add $t1, $s6, $0
+sw $t1, 0($t0)
+lw $t0, 0($t0)
+add $s0, $t1, $t0
+
+f: s0,  A: s6
+
+t0 = (A+4) // address
+t1 = A  // address
+*(A+4) = A  // address
+f = &A + *(A+4)
+f = &A + &A = 2*(&A)
+f = 2*(&A)
+
+

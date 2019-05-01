@@ -1,0 +1,12 @@
+$t0 = 0xAAAAAAAA, $t1 = 0x12345678
+
+2-19-1
+sll $t2, $t0, 44
+or $t2, $t2, $t1
+t2 = 0xBABEF678  -- verified by running on simulator
+
+2-19-2
+t2 = 0xAAAAAAA0
+
+2-19-3
+t2 = 0x00005545

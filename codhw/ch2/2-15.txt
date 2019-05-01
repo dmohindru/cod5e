@@ -1,0 +1,12 @@
+sw $t1, 32($t2)
+
+Instuction format = I-Type
+
+opcode = 43 = 101011
+
+rs = t2 = 10 = 01010
+rt = t1 = 9 = 01001
+
+immi = 00000000 00100000
+
+Instuction in hex = 0xAD490020
