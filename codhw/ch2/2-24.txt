@@ -1,0 +1,5 @@
+2-24-1
+No it cannot as it requires 28 bits for word address
+
+2-24-2
+No as as beq instruction have only 16 bits for jump target
