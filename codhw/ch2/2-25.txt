@@ -1,0 +1,11 @@
+2-25-1
+Instruction format should be similar to branch instruction (I-Type)
+Op code: 6 bits
+rs: 5 bits
+rt: 5 bits (unused)
+Offset: 16 bits
+
+2-25-2
+beq $t0, $0, EndLoop
+addi $t0, $t0, -1
+j StartLoop 
