@@ -1,0 +1,17 @@
+        addi    $t1, $0, $0     # initalize i = 0
+LOOP:   lw      $s1, 0($s0)     # temp = MemArray[0]
+        add     $s2, $s2, $s1   # result = result + temp
+        addi    $s0, $s0, 4     # &MemArray++
+        addi    $t1, $t1, 1     # i = i + 1
+        slti    $t2, $s0, 100   # if(i < 100) t2 = 1, else t2 = 0 
+        bne     $t2, $0, LOOP  # branch if 
+
+i: $t1, result: $s2, MemArray: $s0
+
+/* c code */
+for (i = 0; i < 100; i++) {
+    result = result + MemArray[s0];
+    s0 = s0 + 1;  
+}
+
+

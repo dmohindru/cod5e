@@ -1,0 +1,3 @@
+14 Instuctions
+
+if a = 10, b = 1. So total number of Instuctions executed: 131 instuctions. 
