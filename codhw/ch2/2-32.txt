@@ -1,0 +1,2 @@
+Due to recusive nature of function it is difficult to inline a function.
+Hence not possible.
