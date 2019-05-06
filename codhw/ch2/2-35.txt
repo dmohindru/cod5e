@@ -1,0 +1,3 @@
+We can use the tail-call optimization for the second call to func , but then
+we must restore $ra , $s0 , $s1 , and $sp before that call. We save only one
+instruction ( jr $ra ).

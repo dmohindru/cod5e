@@ -1,0 +1,5 @@
+Register    Value
+$t5         No preserved across function calls. Cannot assume it value.
+$s3         Preserved across function calls. 
+$ra         Preserved after call to func. Is equal to return address in caller function.
+$sp         Preserved after call to func.
