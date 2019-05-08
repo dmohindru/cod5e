@@ -1,0 +1,15 @@
+0x10000000: 0x11223344
+byte    :   0       1       2       3
+value   :   11      22      33      44
+
+so instruction lbu would read byte 11 into register t0. So resulting value in register will be 0x00000011
+
+instruction sw $t0, 0($t2) would value in memory as
+0x00000011
+
+
+if the above problem was with little endian (little end first)
+byte    :   0       1       2       3
+value   :   44      33      22      11
+
+answer would be: 0x00000044
