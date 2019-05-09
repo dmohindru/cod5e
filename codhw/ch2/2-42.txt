@@ -1,0 +1,2 @@
+0x20014924 - 0x1FFFf000 = 0x15924
+Yes it can as 0x15924 is well within range of 0x0FFFFFFC bytes.

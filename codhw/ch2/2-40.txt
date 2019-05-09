@@ -1,0 +1,1 @@
+No, since offset in jump instruction cannot be more than 0x0FFFFFFC bytes long.
