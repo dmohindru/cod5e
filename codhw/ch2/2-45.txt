@@ -1,0 +1,3 @@
+If both processor try to execute ll instruction and able to get its value of zero. Its initial test is passed, so the
+second test is done by sc instruction. Only one of two processor will be successful in this instruction to it processed
+to next instructions to execute critical section code, while other processor jump to start and try again to aquire lock. 
