@@ -28,3 +28,4 @@ New total cpu cycles = 260 * 0.50 million = 130 million
 Therefore improvement in CPI of Arthematic Instruction would be as
 Arthematic Instruction cycles = (130 - 60 - 60) * million = 10 million
 
+
