@@ -1,0 +1,30 @@
+Arthematic Instruction = 70%
+Load/Store Instruction = 10%
+Branch Instruction = 20%
+
+2-47-1
+CPI arth = 2
+CPI Ldst = 6
+CPI brch = 3
+
+Say total Instruction to be 100 million
+Arthematic Instruction = 100 * 0.70 million = 70 million
+Load/Store Instruction = 100 * 0.10 million = 10 million
+Branch Instruction = 100 * 0.20 million = 20 million
+Total CPI = 70 * 2 * million + 10 * 6 * million + 20 * 3 * million = (140 + 60 + 60) * million = 260 million
+Average CPI = 260 million / 100 million = 2.6
+
+Percentage of Arthematic cycles = 70 / 260 = 26.92%
+
+2-47-2
+For performance boost of 25%
+New total cpu cycles = 260 * 0.75 million = 195 million
+Therefore improvement in CPI of Arthematic Instruction would be as
+Arthematic Instruction cycles = (195 - 60 - 60) * million = 75 million
+
+2-47-3
+For performance boost of 50%
+New total cpu cycles = 260 * 0.50 million = 130 million
+Therefore improvement in CPI of Arthematic Instruction would be as
+Arthematic Instruction cycles = (130 - 60 - 60) * million = 10 million
+

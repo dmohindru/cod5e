@@ -1,0 +1,29 @@
+Original case
+Arthemetic CPI = 1
+Load/Store CPI = 10
+Branch CPI     = 3
+
+Total cpu cycles = 500 * 10^6 * 1 + 300 *10^6 * 10 + 100 * 10^6 * 3 = (500 + 3000 + 300) * 10^6 = 3800 millions cycles
+
+2-46-1
+Arthemetic CPI = 1 * 1.10 = 1.10
+Arthemetic Instuction = 500 million * 0.75 = 375 million
+
+Total cpu cycles = 375 * 1.1 * million + 300 * 10 * million + 100 * 3 * million = (412.5 + 3000 + 300) * million = 3712.5 million
+
+Percentage gain = 2.3%. So its not a good design choice
+
+
+2-46-2
+Doubling speed up of Arthemetic Instuction means reducing CPI to half
+Therfore,
+Arthemetic CPI = 0.5
+
+Total cpu cycles = 500 * 0.5 * million + 300 * 10 * million + 100 * 3 * million = (250 + 3000 + 300) * million = 3550 million
+Speed up = 6.6% (quite less)
+
+Improving performance of Arthemetic Instuction by 10 menas reducing CPI of Instuctions by 1/10
+Therfore
+Arthemetic CPI = 0.1
+Total cpu cycles = 500 * 0.1 * million + 300 * 10 * million + 100 * 3 * million = (50 + 3000 + 300) * million = 3350 million
+Speed up = 13.43% (quite less)
