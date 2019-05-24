@@ -1,0 +1,9 @@
+185 = 1011 1001
+122 = 0111 1010
+185 (unsigned) = -71 (signed)
+122 (unsigned) = 122 (signed)
+
+Range of signed 8 bit number = (-128 to 127)
+
+therefore 185 + 122 = -71 + 122 = 51
+it does not overflow

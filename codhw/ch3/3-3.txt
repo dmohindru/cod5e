@@ -1,0 +1,5 @@
+5ED4 = 0011 1110 1101 0100
+
+In hexadecimal number system each hexadecimal digit can represent 4 bit of binary or 2 hexadecimal digit is all required to 
+represent 8 bits (1 byte) of data.
+ 
