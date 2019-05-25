@@ -2,8 +2,15 @@
 122 = 0111 1010
 185 (unsigned) = -71 (signed)
 122 (unsigned) = 122 (signed)
+unsigned        binary             signed
+185             1011 1001           -57
+122          +  0111 1010           122
+----            ---------           ---
+                0100 0001           65
 
-Range of signed 8 bit number = (-128 to 127)
 
-therefore 185 + 122 = -71 + 122 = 51
+
+
+
+therefore 185 + 122 = -57 + 122 = 65
 it does not overflow

@@ -3,5 +3,4 @@
     ---
     063
 
-Range of unsigned 8 bit number = (255 to 0)
-it does not overflow nethier
+nethier
