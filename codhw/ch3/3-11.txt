@@ -1,0 +1,4 @@
+Range of 8-bit unsigned number
+0 to 255
+
+151 + 214 = 365 (out of range) = 255 (saturated arithmetics)

@@ -1,3 +1,11 @@
 185 = 1011 1001
 122 = 0111 1010
 
+Range of signed magnitute format +127 to -127
+
+185 in signed magnitute = -57
+
+(unsigned) 185 - 122 = (signed) -57 - 122 = -179 (out of limit)
+
+result overflows
+
