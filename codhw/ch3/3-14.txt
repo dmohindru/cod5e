@@ -1,0 +1,24 @@
+Total number of iteration required for multiplication of 8 bit number are 8.
+i.e. Total iteration = 8
+Each operation = 4 time units
+In hardware step 2 and 3 can be done in parallel
+
+For hardware
+------------
+1 Cycle - add
+1 Cycle - shift
+1 Cycle - check loop condition
+
+Therefore Total Cycles = 3
+Total time = 8 * 3 * 4 = 96 time units
+
+For software
+------------
+1 Cycle - Decide what to add
+1 Cycle - add
+1 Cycle - left shift
+1 Cycle - right shift
+1 Cycle - check loop condition
+
+Therefore Total Cycle = 5 
+Total time = 8 * 5 * 4 = 160 time units

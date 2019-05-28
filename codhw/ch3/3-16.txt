@@ -1,0 +1,7 @@
+Total adder required for multiplication of 8 bit number = 7
+Adder will be arranged in tree structure. 
+Each adder takes 4 time units to compute result
+All adder in same level would compute result in parallel
+Total levels in tree structure = log2(8) = 3
+
+Total time required for multiplication = 3 * 4 = 12 time units

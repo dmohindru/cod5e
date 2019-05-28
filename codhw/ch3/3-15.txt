@@ -1,0 +1,4 @@
+Total adder required for multiplication of 8 bit number = 7
+Each adder takes 4 time units to compute result
+
+Total time required  = 7 * 4 = 28 time units
