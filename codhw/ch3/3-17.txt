@@ -1,2 +1,16 @@
 0x33 times 0x55 using shifts and add
-0x33 X 0x55 = 0x10EF
+0x33 * 0x55 = 0x10EF
+0x33 = 51
+0x55 = 85
+
+51 = 32 + 16 + 2 + 1
+therefore
+51 * 85 = (32 + 16 + 2 + 1) * 85
+
+We can compute 
+shift 85 left by 5 places. --> t1
+shift 85 left by 4 places. --> t2
+shift 85 left by 1 place. --> t3
+
+t1 = t1 + t2 + t3
+t1 = t1 + 85
