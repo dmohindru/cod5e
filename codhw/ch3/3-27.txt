@@ -1,0 +1,19 @@
+-1.5625 X 10^-1 = -0.15625 = -0.00101 X 2^0
+
+moving binary point 3 position to right
+-1.01 X 2^-3
+
+S = 1
+E = -3 + 15 = 12 = 01100
+F = 0100 0000 00
+
+Floating point representation
+1 01100 0100 0000 00
+
+Range of exponent for 16-bit precision 2^-15 to 2^15
+Range of exponent for 32-bit precision 2^-127 to 2^127
+Range of exponent for 64-bit precision 2^-1023 to 2^1023
+
+Precision bits for 16-bit format = 10 bits
+Precision bits for 32-bit format = 23 bits
+Precision bits for 64-bit format = 52 bits

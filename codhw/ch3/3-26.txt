@@ -1,7 +1,35 @@
--1.5625 X 10^-1
+-1.5625 X 10^-1 = -0.15625 = -0.00101 X 2^0
 
-E = (Dec) -1 = 1111 1111 1111
-F = -15625 = 1111 1111 1100 0010 1111 0111
+moving binary point two points to right
+-0.101 X 2^-2
+
+E = 1111 1111 1111 1110
+F= -0.101000000000000000000000
 
 Floating point representation
-1111 1111 1111 1111 1111 1100 0010 1111 0111 = 0xFFFFFC2F7
+111111111110 101100000000000000000000
+
+
+This floating point representation has a better precision than single floating point representation
+but less precision than double floating point representation. 
+
+
+---------------Rough work--------------------------------
+Fraction stored in two complement format
+        1010 0000 0000 0000 0000 0000 0000 0000 0000
+
+Not     0101 1111 1111 1111 1111 1111 1111 1111 1111
+Add 1                                              1
+----------------------------------------------------
+        0110 0000 0000 0000 0000 0000 0000 0000 0000
+
+
+111111111110 101100000000000000000000
+
+Therefore F = 0101 0000 0000 0000 0000 0000 0000 0000 0001
+
+
+
+
+Floating point representation
+1111 1111 1111 1110 0101 0000 0000 0000 0000 0000 0000 0000 0001

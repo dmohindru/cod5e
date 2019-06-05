@@ -1,0 +1,74 @@
+16 bit half precision
+
+s   eeeee   ffffffffff
+s = sign bit (1 bit)
+e = exponent bits (5 bits)
+f = fraction bits (10 bits)
+bais = 2^4 - 1 = 15
+
+Half precision format
+Exponent        Fraction        Object Representation
+    0               0               0
+    0           Non-Zero            +- denormalized number
+    1-30        Anything            +- floating-point number
+    31              0               +- infinity
+    31          Non-Zero            NaN (Not a Number)
+
+Range of valid exponent
+Low:    1 - 15 = -14
+High:   30-15  = 15
+
+Num1: 2.6125 X 10E1 = 26.125
+Binary: 11010.001 = 1.1010001000 X 2E4
+
+Num2: 4.150390625 X 10E-1 = 0.4150390625
+Binary: 0.011010100100 = 1.1010100100 X 2E-2
+
+
+
+Step 1: Align number with smaller exponent to number with larger exponent 
+Aliging Num2: .0000011010 1 0 1 X 2E4
+                          G R S
+Guard Bit : 1
+Round Bit : 0
+Stick Bit : 1
+
+Guard bit and stick bit set, combined value of G R S is more than half of least significant bit.
+So round up number
+.0000011011 X 2E4
+
+Step 2: Addition of significant
+1.1010001000 X 2E4
+0.0000011011 X 2E4
+------------
+1.1010100011 X 2E4
+
+
+Step 3: Normalize sum if not Normal and check for overflow or underflow
+Exponent for Normailze is with range. No action needed
+
+Step 4: Round the significant to appropriate number of bits
+
+Rounded in step 1
+
+Final result
+11010.100011 X 2E0 =  26.546875 X 10E0 = 2.6546875 X 10E1 
+
+---------------------------------------------------------
+Some observation
+value of least significant digit 0 if set = 1/2E10 = 0.000976562 = 9.76562 X 10E-4 
+half of this value = 4.88281 X 10E-4
+Combined value for Guard, Round and Sticky bits
+G = 11th bit
+R = 12th bit
+S = 13th bit
+
+G   R   S       Value                   More than half
+0   0   0       0.0                     No
+0   0   1       1.22070 X 10E-4         No
+0   1   0       2.44141 X 10E-4         No
+0   1   1       3.66211 X 10E-4         No
+1   0   0       4.88281 X 10E-4         Equal (need a tie breaker)
+1   0   1       6.10351 X 10E-4         Yes
+1   1   0       7.32422 X 10E-4         Yes
+1   1   1       8.54492 X 10E-4         Yes

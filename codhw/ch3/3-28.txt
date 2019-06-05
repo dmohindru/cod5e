@@ -1,0 +1,20 @@
+-1.5625 X 10^-1 = -0.15625 = -0.00101 X 2^0
+
+moving binary point 2 position to right
+-0.101 X 2^-2
+
+Exponent format (7 bits for binary representation, 1 bit for sign)
+E = 0000 010 1
+
+F = -0101
+So in two complement representation
+
+F = 0101 0000 0000 0000 0000 0000
+Not 1010 1111 1111 1111 1111 1111
+Add                             1
+---------------------------------
+    1011 0000 0000 0000 0000 0000
+
+Floating point representation as
+1011 0000 0000 0000 0000 0000 0000 0101
+1011 0000 0000 0000 0000 0000 0000 0101
