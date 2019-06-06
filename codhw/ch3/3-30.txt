@@ -1,0 +1,28 @@
+Num1: –8.0546875 X 10E0
+Binary: -1000.0000111 = -1.0000000111 X 2E3 
+
+
+Num2: -1.79931640625 X 10E-1 = -0.179931640625 X 10E0 
+Binary: -0.001011100001 = -1.011100001 X 2E-3 
+
+
+Step 1: Add exponents
+3 + (-3) = 0
+-14 <= -3 <= 15
+
+or baised exponent
+(3+15) + (-3+15) - 15 = 18 + 12 - 15 = 15
+1 <= 15 <= 30
+
+Actual exponent = 15 -15 = 0 
+
+Step 2: Multiply significants
+
+
+Step 3: Normalize product if required and then check the exponent for overflow or underflow
+
+
+Step 4: Round the product
+
+
+Step 5: Set sign of product according to signs of operands
