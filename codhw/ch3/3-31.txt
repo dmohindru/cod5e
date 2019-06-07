@@ -1,0 +1,30 @@
+Num 1: 8.625 X 10E1 = 86.25
+Binary: 1010110.01 = 1.0101100100 X 2E6 
+
+Num 2: -4.875 X 10E0 = -4.875
+Binary: -100.111 = -1.0011100000 X 2E2
+
+Step 1: Subtract exponents
+6-2 = 4
+-14 <= 4 <= 15 (within range)
+
+Step 2: Divide significants
+1.0101100100 / 1.0011100000 = 1.0001101100 0 1 1
+                                           G R S
+
+
+Step 3: Normalize quotinet if required and then check the exponent for overflow or underflow
+Result already Normalized. exponent within range.
+
+Step 4: Round the quotinet
+G = 0, R = 1, S = 1
+combined value of G R S bits less than half of least significant bit 0. No need to round off.
+
+Step 5: Set sign of result according to signs of operands
+Signs of divident and divisor is different. Hence sign of result in -ve.
+
+Final result = -1.0001101100 X 2E4 = -10001.101100 = -17.6875 
+
+Result using calculator = -17.692307692
+
+Some inforamtion was lost was result did'nt find in available 10 bits. 

@@ -3,7 +3,7 @@ Binary: -1000.0000111 = -1.0000000111 X 2E3
 
 
 Num2: -1.79931640625 X 10E-1 = -0.179931640625 X 10E0 
-Binary: -0.001011100001 = -1.011100001 X 2E-3 
+Binary: -0.001011100001 = -1.0111000010 X 2E-3 
 
 
 Step 1: Add exponents
@@ -17,12 +17,26 @@ or baised exponent
 Actual exponent = 15 -15 = 0 
 
 Step 2: Multiply significants
+    1.0000000111
+X   1.0111000010
+    1.0111001100 0 0 1 100111
+                 G R S
 
 
 Step 3: Normalize product if required and then check the exponent for overflow or underflow
+Product already normalized 1.0111001100 and exponent is zero well within the range
 
 
 Step 4: Round the product
+Since only sticky bit is set and combined value of G R S is less than half of
+least significant bit. Not need to round result
 
 
 Step 5: Set sign of product according to signs of operands
+Both number are -ve hence sign of product is +ve.
+
+final result = 1.0111001100 X 2E0 = 1.44921875
+-2, -3, -4, -7, -8
+result using calculator = 1.449293137
+
+Some information was lost as result did'nt find in available 10 bits
