@@ -1,0 +1,32 @@
+(3.984375 X 10E-1 + 3.4375 X 10E-1) + 1.771 X 10E3
+
+Num1 = 3.984375 X 2E-1 = 0.3984375
+Binary = 0.01100110000000 = 1.1001100000 X 2E-2
+
+Num2 = 3.4375 X 2E-1 = 0.34375
+Binary = 0.01011000000000 = 1.0110000000 X 2E-2
+
+Num3 = 1.771 X 2E3 = 1771.00
+Binary = 11011101011.00000000 = 1.1011101011 X 2E10
+
+Preformaing add in parenthesis first (3.984375 X 2E-1 + 3.4375 X 2E-1)
+----------------------------------------------------------------------
+Radix point is already aligned. Just adding significant
+ 1.1001100000 X 2E-2
+ 1.0110000000 X 2E-2
+--------------------
+10.1111100000 X 2E-2
+Normalizing result = 1.0111110000 X 2E-1
+
+1.0111110000 X 2E-1 + 1.1011101011 X 2E10
+Aligning radix point of smaller number with larger number
+0.0000000000 101 X 2E11
+
+Now adding significant
+1.1011101011 000 X 2E10
+0.0000000000 101 X 2E10
+----------------
+1.1011101011 101 X 2E10
+
+Rounding result
+1.1011101100 X 2E10 = 11011101100.00 = 1772 = 1.772 X 10E3
