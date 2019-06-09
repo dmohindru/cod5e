@@ -1,0 +1,2 @@
+
+Comparing result of ex 3-32 (1772) and ex 3-33 (1771) result are not equal.

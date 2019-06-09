@@ -1,0 +1,35 @@
+3.41796875 X 10E-3 X (6.34765625 X 10E-3 X 1.05625 X 10E2)
+
+Num1: 3.41796875 X 10E-3 = 0.00341796875 
+Binary: 0.00000000111000000 = 1.1100000000 X 2E-9
+
+Num2: 6.34765625 X 10E-3 = 0.00634765625 
+Binary: 0.00000001101000000 = 1.1010000000 X 2E-8 
+
+Num3: 1.05625 X 10E2 = 105.625 
+Binary: 1101001.10100000000 = 1.1010011010 X 2E6
+
+First calculating expression in parentheses
+(6.34765625 X 10E-3 X 1.05625 X 10E2)
+both signs +ve, result +ve.
+Adding exponents
+-8 + 6 = -2 (within range)
+Multiplying significants
+            1.1010000000
+            1.1010011010
+            ------------
+            10.101011101001
+adjusting exponent 1.0101011101 001 X 2E-1 ---> result
+G = 0, R = 0, S = 1 (no need to round)
+
+1.0101011101 X 2E-1 X 1.1100000000 X 2E-9
+both signs +ve, result +ve
+Adding exponents -1 + (-9) = -10 (within range)
+Multiplying exponents
+            1.0101011101
+            1.1100000000
+            ------------
+            10.010110001011
+adjusting exponent 1.0010110001 011 X 2E-9
+G = 0, R = 1, S = 1 (no need to round)
+Final reult = 1.0010110001 X 2E-9 = 0.0000000010 = 0.001953125 = 1.953125 X 10E-3

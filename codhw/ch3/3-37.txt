@@ -1,0 +1,6 @@
+No
+result from ex 3-35 (underflow)
+result from ex 3-36 (1.953125 X 10E-3)
+
+Since A and B are both small number. Thier product does not fit
+into 16 bit floating point representation.

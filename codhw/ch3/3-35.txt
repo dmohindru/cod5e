@@ -1,0 +1,16 @@
+(3.41796875 X 10E-3 X 6.34765625 X 10E-3) X 1.05625 X 10E2
+
+Num1: 3.41796875 X 10E-3 = 0.00341796875 
+Binary: 0.00000000111000000 = 1.1100000000 X 2E-9
+
+Num2: 6.34765625 X 10E-3 = 0.00634765625 
+Binary: 0.00000001101000000 = 1.1010000000 X 2E-8 
+
+Num3: 1.05625 X 10E2 = 105.625 
+Binary: 1101001.10100000000 = 1.1010011010 X 2E6
+
+First calculating expression in parentheses
+(3.41796875 X 10E-3 X 6.34765625 X 10E-3)
+1. Adding exponents
+-9 + (-8) = -17 (out of range - underflow)
+exception should be trigerred. Number cannot be represented

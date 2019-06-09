@@ -1,0 +1,7 @@
+Various online calculators
+
+Calculator to convert decimal fraction to binary fraction
+https://planetcalc.com/862/
+
+Calculator for floating point arithmetic
+https://www.exploringbinary.com/binary-calculator/

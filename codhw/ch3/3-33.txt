@@ -8,3 +8,24 @@ Binary = 0.01011000000000 = 1.0110000000 X 2E-2
 
 Num3 = 1.771 X 2E3 = 1771.00
 Binary = 11011101011.00000000 = 1.1011101011 X 2E10
+
+First calculating (3.4375 X 10E-1 + 1.771 X 10E3)
+Aligning radix point of smallest number
+0.0000000000 011 X 2E10
+1.1011101011 000 X 2E10
+-----------------------
+1.1011101011 011 X 2E10 ---> Result
+
+G = 0, R = 1, S = 1. Less than half way. No need to round up.
+
+Aligning radix point of 3.984375 X 10E-1 with result calcuated above
+0.0000000000 011 X 2E10
+1.1011101011 000 X 2E10
+-----------------------
+1.1011101011 011 X 2E10
+
+G = 0, R = 1, S = 1. Less than half way. No need to round up.
+
+Final result = 1.1011101011 X 2E10 = 11011101011.00 X 2E10 = 1771.00
+
+
