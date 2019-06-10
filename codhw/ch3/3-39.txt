@@ -1,0 +1,33 @@
+(1.666015625 X 10E0 X 1.9760 X 10E4) + (1.666015625 X 10E0 X -1.9744 X 10E4)
+------------A----------------------    ----------------B--------------------
+
+Num1: 1.666015625
+Binary: 1.1010101010 X 2E0
+
+Num2: 1.9760 X 10E4 = 19760.00
+Binary: 100110100110000.0000000000 = 1.0011010011 X 2E14
+
+Num3: -1.9744 X 10E4 = -19744.00
+Binary: 100110100100000.0000000000 = 1.0011010010 X 2E14
+
+Calculating product A
+both sign same. result positive
+Adding exponents: 14 + 0 = 14
+Multiplying significants
+        1.1010101010
+        1.0011010011
+        ------------
+        10.00000010011000011110 X 2E14
+Normalizing result
+        1.0000000100 111 X 2E15
+    G = 1, R = 1, S = 1 (round result)
+        1.0000000101 X 2E15 -----> A
+
+
+Calculating product B
+both sign opp. result negitive
+Adding exponents: 14 + 0 = 14
+Multiplying significants
+        1.1010101010
+        1.0011010010
+        ------------

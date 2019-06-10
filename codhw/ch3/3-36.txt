@@ -19,17 +19,21 @@ Multiplying significants
             1.1010011010
             ------------
             10.101011101001
+            10.10101110100100000000
+adjusting exponent 1.0101011101 001 X 2E-1 ---> result
 adjusting exponent 1.0101011101 001 X 2E-1 ---> result
 G = 0, R = 0, S = 1 (no need to round)
 
 1.0101011101 X 2E-1 X 1.1100000000 X 2E-9
 both signs +ve, result +ve
 Adding exponents -1 + (-9) = -10 (within range)
-Multiplying exponents
+Multiplying significants
             1.0101011101
             1.1100000000
             ------------
             10.010110001011
+            1.00101000101100000000
 adjusting exponent 1.0010110001 011 X 2E-9
-G = 0, R = 1, S = 1 (no need to round)
-Final reult = 1.0010110001 X 2E-9 = 0.0000000010 = 0.001953125 = 1.953125 X 10E-3
+adjusting exponent 1.0010100010 110 X 2E-9
+G = 1, R = 1, S = 0 (round)
+Final reult = 1.0010100011 X 2E-9 = 0.0000000010 = 0.001953125 = 1.953125 X 10E-3
