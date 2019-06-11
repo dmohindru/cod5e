@@ -31,3 +31,18 @@ Multiplying significants
         1.1010101010
         1.0011010010
         ------------
+        -10.00000001111101110100 X 2E14
+Normalizing result
+        -1.0000000011 111 X 2E15
+   G = 1, R = 1, S = 1 (round result)
+        -1.0000000100 X 2E15 -----> B
+
+Calculating A - B
+Radix point already aligned
+Subtracting significants
+        1.0000000101
+       -1.0000000100
+       --------------
+        0.0000000001 X 2E15
+Normalizing result
+        1.000000000 X 2E5 = 100000.00 = 32.00
