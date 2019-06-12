@@ -1,0 +1,5 @@
+0101 0000 0000 0000 0000
+
+0.5
+
+Yes it cannot be represented exactly
