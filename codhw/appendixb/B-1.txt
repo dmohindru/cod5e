@@ -1,0 +1,35 @@
+Demorgan's law
+~(A+B) = ~A . ~B
+~(A.B) = ~A + ~B
+
+Proving ~(A+B) = ~A . ~B
+A      B       A+B     ~(A+B)
+0       0       0       1
+0       1       1       0
+1       0       1       0
+1       1       1       0    
+
+A      B       ~A       ~B      ~A . ~B
+0      0        1       1       1
+0      1        1       0       0
+1      0        0       1       0
+1      1        0       0       0
+
+Hence equivalent
+
+Proving ~(A.B) = ~A + ~B
+A       B       A.B     ~(A.B)
+0       0       0       1
+0       1       0       1
+1       0       0       1
+1       1       1       0
+
+A       B       ~A     ~B       ~A + ~B
+0       0       1       1       1
+0       1       1       0       1
+1       0       0       1       1
+1       1       0       0       0
+
+Hence equivalent
+
+

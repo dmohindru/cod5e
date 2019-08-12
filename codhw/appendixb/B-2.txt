@@ -1,0 +1,28 @@
+E = ((A.B) + (A.C) + (B.C)) . ~(A.B.C) and E = E = ~A.B.C + A.~B.C + A.B.~C 
+are equivalent.
+
+Applying Demorgan's theorm
+E = ((A.B) + (A.C) + (B.C)) . (~A + ~B + ~C)
+Applying distributive propery
+E = ~A(A.B) + ~A(A.C) + ~A(B.C)
+  + ~B(A.B) + ~B(A.C) + ~B(B.C)
+  + ~C(A.B) + ~C(A.C) + ~C(B.C)
+
+Applying commumatative propery
+E = (~A.A)B + (~A.A).C + ~A(B.C)
+  + (~B.B).A + ~B(A.C) + (~B.B)C
+  + ~C(A.B) + (~C.C)A + (~C.C)B
+
+Applying propery ~A.A = 0
+E = 0.B + 0.C + ~A(B.C)
+  + 0.A + ~B(A.C) + 0.C
+  + ~C(A.B) + 0.A + 0.B
+
+Applying propery 0.A = 0
+E = 0 + 0 + ~A(B.C)
+  + 0 + ~B(A.C) + 0
+  + ~C(A.B) + 0 + 0
+
+Applying propery A + 0 = A
+E = ~A.B.C + A.~B.C + A.B.~C
+Hence proved.
