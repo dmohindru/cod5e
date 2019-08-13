@@ -1,0 +1,9 @@
+Truth Table of exclusive OR
+A       B   |   Y
+0       0   |   0
+0       1   |   1
+1       0   |   1
+1       1   |   0
+
+Boolena equation as
+Y = ~A.B + A.~B

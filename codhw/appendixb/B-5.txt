@@ -1,0 +1,35 @@
+Construct And, Not, Or gate using NOR gate
+
+NOR Truth Table
+A       B   |   Y
+0       0   |   1
+0       1   |   0
+1       0   |   0
+1       1   |   0
+
+Nice like giving insight about solving this problem
+https://www.instructables.com/id/NOT-AND-OR-Gates-From-NAND-Gates/
+
+Law used in solving this problem
+1. Involution Law
+    ~(~A) = A
+
+2. Idempotency Law
+    A + A = A
+    A.A   = A
+
+3. DeMorgan's Law
+    ~(A+B) = ~A.~B
+    ~(A.B) = ~A + ~B
+
+
+Y = ~(A+B)
+
+OR Function using NOR
+Y = ~(~(A+B))
+
+NOT Function using NOR
+Y = ~(A+A)
+
+And Function using NOR
+Y = ~(~(A+A) + ~(B+B))

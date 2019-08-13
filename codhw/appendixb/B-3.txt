@@ -1,0 +1,14 @@
+Say n = 3 (n1, n2, n3) for any function Y
+truth table of 3 input function Y as under
+
+n1      n2      n3
+0       0       0 
+0       0       1
+0       1       0
+0       1       1
+1       0       0
+1       0       1
+1       1       0
+1       1       1
+
+counting row in above truth table we get 8 = 2^3 
