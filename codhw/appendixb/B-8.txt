@@ -3,3 +3,10 @@ Y = ~A.~B.~C.D + ~A.~B.C.~D + ~A.B.~C.~D + ~A.B.C.D
   + A.~B.~C.~D + A.~B.C.D + A.B.~C.D + A.B.C.~D
 
 Simplyfing above equation
+Y = ~A.~B(~C.D + C.~D) + A.B(~C.D + C.~D) + ~A.B(~C~D + C.D) + A.~B(~C~D + C.D)
+
+Y = ~A.~B(C XOR D) + A.B(C XOR D) + ~A.B.~(C XOR D) + A.~B.~(C XOR D)
+
+Y = (C XOR D).~(A XOR B) + ~(C XOR D).(A XOR B)
+
+Y = (A XOR B) XOR (C XOR D)
