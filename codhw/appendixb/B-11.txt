@@ -1,0 +1,13 @@
+If X contains X2, X1, X0
+
+Logic Function if X contains only one 0
+Y = ~X2.X1.X0 + X2.~X1.X0 + X2.X1.~X0
+
+Logic Function if X contains even number of zero
+Y = ~X2.~X1.X0 + ~X2.X1.~X0 + X2.~X1.~X0
+
+Logic Function if X interpreted as unigned binary number less than 4
+Y = ~X2
+
+Logic Function if X interpreted as a negetive number
+Y = X2
