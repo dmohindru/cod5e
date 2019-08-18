@@ -1,0 +1,5 @@
+Logic equation for function C
+C = A.S + ~S.B
+
+Logic equation for function D
+C = A.~S + S.B

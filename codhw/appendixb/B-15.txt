@@ -1,0 +1,6 @@
+E = ~((~A+~B+C) . (~A+B+~C) . (A+~B+~C))
+Apply Demorgan's Theorm
+E = ~(~A+~B+C) + ~(~A+B+~C) + ~(A+~B+~C)
+Again applying Demorgan's Theorm
+E = (~~A.~~B.~C) + (~~A.~B.~~C) + (~A.~~B.~~C)
+E = (A.B.~C) + (A.~B.C) + (~A.B.C)

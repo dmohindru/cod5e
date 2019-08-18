@@ -41,6 +41,15 @@ Logic equation would be
 LT = ~x2.y2 + (x2 XNOR y2).(~x1.y1) + (x2 XNOR y2).(x1 XNOR y1).(~x0.y0)  
 
 B) For signed binary number x2x1x0 to be less than y2y1y0 following condition need to be true
-1. x2 > y2 
+1. x2 > y2 (sign bit) 
     or
-2. x2 
+2. x2 = y2 and x1 < y1
+    or
+3. x2 = y2 and x1 = y1 and x0 < y0
+
+Logic equation would be
+LT = x2.~y2 + (x2 XNOR y2).~x1.y1 + (x2 XNOR y2).(x1 XNOR y1).~x0.y0
+
+C) For X = Y
+
+EQ = (x2 XNOR y2).(x1 XNOR y1).(x0 XNOR y0)
