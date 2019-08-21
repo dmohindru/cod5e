@@ -1,0 +1,27 @@
+Simple check for overflow is carry in to most significant bit is not same as carry out.
+We prove this point use a examples
+Lets say we have 4 bit signed numbers for simplicity
+
+Case 1: A>=0 and B>=0
+For overflow sum should be greater than 7
+So we choose A = 7, B = 1 
+A + B = 8 (should be)
+doing binary addition
+A:      0111
+B:      0001
+-------------
+S:      1000 (-8)
+Here we can see carry in to msb(s) is 1 and carry out of msb(s) is 0
+
+Case 2: A<0 and B<0
+For overflow sum should be less than -8
+So we choose A = -8, B = -7 
+A + B = -15 (should be)
+doing binary addition
+A:      1000
+B:      1001
+-------------
+S:    1)0001 (1)
+Here we can see carry in to msb(s) is 0 and carry out of msb(s) is 1
+
+Hence we proved the hypothesis.

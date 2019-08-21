@@ -1,0 +1,3 @@
+FUNC1 - 2X1 Multiplexer
+
+FUNC2 - Updown counter

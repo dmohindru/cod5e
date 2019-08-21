@@ -1,0 +1,28 @@
+Truth Table for multiplexer
+
+S   A   B   |   C
+-----------------
+0   0   0   |   0
+0   0   1   |   1
+0   1   0   |   0
+0   1   1   |   1
+1   0   0   |   0
+1   0   1   |   0
+1   1   0   |   1
+1   1   1   |   1
+
+C = ~S.~A.B + ~S.A.B + S.A.~B + S.A.B
+C = ~S.B(~A + A) + S.A(~B + B)
+C = ~S.B + S.A
+
+Truth Table with input don't cares
+S   A   B   |   C
+------------------
+0   X   0   |   0
+0   X   1   |   1
+1   0   X   |   0
+1   1   X   |   1
+
+C = ~S.B + S.A
+
+if we have input don't cares we can simply omit that input from minterm.
