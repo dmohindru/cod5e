@@ -1,0 +1,33 @@
+For carry save addition of 3 numbers scheme logic equation for carry and sum
+
+sum = a XOR b XOR c
+carry = c.(a XOR b) + A.B
+
+both equation contains two level of logic hence both equation can compute result
+in 2T time.
+
+As seen in exercise B-29 16 bit carry look ahead adder would take 8T time to computer result
+when used in ripple carry of 4 bit lookahead carry units.
+So to compute sum of four 16 bit number it would need 4 * 8T = 32T
+
+For carry save addition scheme operation would follow as below
+a
+b
+c
+--
+sum 
+carry 
+d
+----
+sum_i
+carry_i
+-------
+final sum
+
+a+b+c would consume 2T
+sum+carry+d would consume 2T
+sum_i + carry_i would consume 8T (16 bit carry look ahead adder)
+Total time consumed = 2T + 2T + 8T = 12T
+
+Means its carry save is 2.66 time faster than look ahead adders
+

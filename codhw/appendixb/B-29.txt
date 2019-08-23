@@ -1,0 +1,18 @@
+Time consumed by 16 bit ripple carry adder
+Time_ripple = 2T*16 = 32T
+
+Time consumed by 16 bit carry look ahead adder using 4 bit look ahead unit and using ripple carry to propogate carry from 
+group of 4 bits
+Time_LHC = 2T*4 = 8T
+
+Performance ration = Time_ripple / Time_LHC = 32T / 8T = 4 
+Means 16 bit ripple carry adder is 4 times slower than 16 bit carry look ahead adder.
+
+
+I Doubt the correctness of below argument.
+
+Time consumed by 16 bit carry look ahead adder using second level of abstraction
+Time_LHC_2 = 2T (for 1st level of abstraction) + 2T (for 2nd level of abstraction) = 4T
+
+Performance ration = Time_ripple / Time_LHC_2 = 32T / 4T = 8 
+Means 16 bit ripple carry adder is 8 times slower than 16 bit carry look ahead adder using second level of abstraction.

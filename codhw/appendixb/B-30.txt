@@ -1,0 +1,19 @@
+Time Ripple carry = 2T X 64 = 128T
+
+Time Carry Look ahead (4 bit group) = 2T X 16 = 32T
+
+Time Carry Look ahead (16 bit group) = 2T X 4 = 8T
+
+I Doubt the correctness of below argument.
+
+Time Carry Look ahead Second Level = 2T + 2T = 4T
+
+Ratios
+-----
+Time_ripple/Time_LHC_4Bit = 128T / 32T = 4
+
+Time_ripple/Time_LHC_16Bit = 128T / 8T = 16
+
+I Doubt the correctness of below argument.
+
+Time_ripple/Time_LHC_2nd_level = 128T / 4T = 32

@@ -1,0 +1,9 @@
+Compute sum and carry for 1 bit is 2T for carry look ahead and ripple carry adder.
+
+Since in 4 bit carry look ahead adder all four bit are computed in parallel hence it consumes 2T time.
+
+In ripple carry adder next bit depends on previous bit carry. So it consumes 
+2T + 2T + 2T + 2T = 8T
+
+Performance ratio = 8T / 2T = 4 . 
+Means 4 bit ripple carry adder is 4 times slower than 4 bit carry look ahead adder.
