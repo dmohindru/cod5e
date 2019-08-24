@@ -1,0 +1,33 @@
+There would be seven levels involved in calcuation sum of 16 partial products
+Level 1 to 6 each would consume 2T time
+Level 7 which is Look ahead carry adder would consume 8T time.
+Hence total time consumed: 2T X 6 + 24T = 36T
+
+If multiplication is done using traditional carry look ahead scheme.
+Then it would consume be as under
+M0:  16 bits: 8T
+M1:  17 bits: 12T
+M2:  18 bits: 12T
+M3:  19 bits: 12T
+M4:  20 bits: 12T
+M5:  21 bits: 16T
+M6:  22 bits: 16T
+M7:  23 bits: 16T
+M8:  24 bits: 16T
+M9:  25 bits: 20T
+M10: 26 bits: 20T
+M11: 27 bits: 20T
+M12: 28 bits: 20T
+M13: 29 bits: 24T
+M14: 30 bits: 24T
+M15: 31 bits: 24T
+M16: 32 bits: 24T
+
+ Time = 8T + 12TX4 + 16TX4 + 20TX4 + 24TX4
+ Time = 296T
+
+ Speed up = 296/36 = 8.22
+
+
+
+
