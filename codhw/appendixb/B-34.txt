@@ -1,0 +1,16 @@
+From previous exercises carry look ahead adder takes 8T time to compute addition of two numbers.
+
+Hence with traditional scheme of CLA time required to add four numbers
+T_cla = 8T * 3 = 24T
+
+With carry save adder scheme, addition will be computed as below
+A + B + C   (Level 1) - 2T
+
+S1 + C1 + D (Level 2) - 2T
+
+S2 + C2     (Level 3) - 8T (Using CLA)
+
+Total time Level 1 + Level 2 + Level 3
+T_csa = 2T + 2T + 8T = 12T
+
+Speed up T_cla/T_csa = 24T / 12T = 2.0

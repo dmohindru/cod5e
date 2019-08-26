@@ -1,0 +1,4 @@
+D-Latch being a transparent, means that it would take what ever is on D line as input when clock is high. So if during high clock
+D line change many time, that many time the output Q of D-latch will change. 
+
+When the input line changes state just before the negetive edge of clock. In that case waveform of D-Latch and D-Flipflop would be same.
