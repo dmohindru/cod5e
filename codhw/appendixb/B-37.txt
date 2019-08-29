@@ -1,0 +1,2 @@
+https://www.allaboutcircuits.com/textbook/digital/chpt-11/finite-state-machines/
+This is a nice article on implementing state machine using a flip flop
