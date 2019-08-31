@@ -1,23 +1,22 @@
-State truth table
-
+Grey Code Squence
 
 Current State       Next State      Output
 -------------       ----------      --------
 Sc  Sb  Sa          Sc  Sb  Sa      C   B   A
 0   0   0           0   0   1       0   0   1
-0   0   1           0   1   0       0   1   0
-0   1   0           0   1   1       0   1   1
-0   1   1           1   0   0       1   0   0
-1   0   0           1   0   1       1   0   1
-1   0   1           1   1   0       1   1   0
+0   0   1           0   1   1       0   1   1
+0   1   1           0   1   0       0   1   0
+0   1   0           1   1   0       1   1   0
 1   1   0           1   1   1       1   1   1
-1   1   1           0   0   0       0   0   0
+1   1   1           1   0   1       1   0   1
+1   0   1           1   0   0       1   0   0
+1   0   0           0   0   0       0   0   0
 
 Simplified logic equation for next state input to flip flops
 
-Sc_in = ~Sc.Sb.Sa + Sc.~Sb + Sc.~Sa
-Sb_in = Sb XOR Sa
-Sa_in = ~Sa
+Sc_in = ~Sc.Sb.~Sa + Sc.Sa + Sc.Sb
+Sb_in = ~Sc.Sa + Sb.~Sa
+Sa_in = Sc XNOR Sb
 
 As per problem if reset input is asserted counter should be reset.
 So final input to state flip flop would be 
