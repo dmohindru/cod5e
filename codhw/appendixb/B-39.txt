@@ -1,0 +1,30 @@
+State truth table
+
+
+Current State       Next State      Output
+-------------       ----------      --------
+Sc  Sb  Sa          Sc  Sb  Sa      C   B   A
+0   0   0           0   0   1       0   0   1
+0   0   1           0   1   0       0   1   0
+0   1   0           0   1   1       0   1   1
+0   1   1           1   0   0       1   0   0
+1   0   0           1   0   1       1   0   1
+1   0   1           1   1   0       1   1   0
+1   1   0           1   1   1       1   1   1
+1   1   1           0   0   0       0   0   0
+
+Simplified logic equation for next state input to flip flops
+
+Sc_in = ~Sc.Sb.Sa + Sc.~Sb + Sc.~Sa
+Sb_in = Sb XOR Sa
+Sa_in = ~Sa
+
+As per problem in reset input is asserted counter should be reset.
+So final input to state flip flop would be 
+Sc = Sc_in.~R
+Sb = Sb_in.~R
+Sa = Sa_in.~R
+
+If inc input is asserted only then counter should increment.
+Logic equation of clock would be
+c_out = inc.c_in

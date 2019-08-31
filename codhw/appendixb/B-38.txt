@@ -1,0 +1,24 @@
+Let there be two flip flop recording state as Sa and Sb, and three output signal
+L - for left light
+M - for middle light
+R - for right light
+
+Truth table for whole state machine as under
+
+Current State       Next State       Outputs    Next State Inputs
+-------------       ----------      ---------   -----------------
+Sa      Sb          Sa      Sb      L   M   R       Sa      Sb
+0       0           0       1       1   0   0       0       1
+0       1           1       0       0   1   0       1       0
+1       0           0       0       0   0   1       0       0
+1       1           x       x       0   0   0       0       0
+
+Logic equation of Outputs on based of current state
+
+L = ~Sa . ~Sb
+M = ~Sa . Sb
+R = Sa . ~Sb
+
+Logic equation for inputs for next state inputs
+Sa_in = ~Sa . Sb
+Sb_in = ~Sa. ~Sb
