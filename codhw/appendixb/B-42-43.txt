@@ -1,0 +1,83 @@
+Various states
+NSGreen:    Green light on North South road is lit
+NSYellow:   Yellow light on North South road is lit
+EWGreen:    Green light on East West road is lit
+EWYellow:   Yellow light on East West is lit
+
+State number assignment
+NSGreen:  00
+NSYellow: 01
+EWGreen:  11
+EWYello:  10
+
+So would need two D-Flip Flop to store all four state. Let it be S0 to store MSB and S1 to store LSB.
+
+Input for state machine
+EWCar:  Car is waiting at East West road to cross traffic signal.
+NSCar:  Car is waiting at North South road to cross traffic signal.
+TS:     Timer signal when asserted signalS counter is finished counting.
+
+Next State Table
+------Inputs--------------  ----Outputs------
+TS  EWCar   NSCar   S0    S1      S0+     S1+
+0     0      0      0     0   |    0       0
+0     0      0      0     1   |    1       1
+0     0      0      1     0   |    0       0
+0     0      0      1     1   |    1       1
+0     0      1      0     0   |    0       0
+0     0      1      0     1   |    1       1
+0     0      1      1     0   |    0       0
+0     0      1      1     1   |    1       1
+0     1      0      0     0   |    0       0
+0     1      0      0     1   |    1       1
+0     1      0      1     0   |    0       0
+0     1      0      1     1   |    1       1
+0     1      1      0     0   |    0       0
+0     1      1      0     1   |    1       1
+0     1      1      1     0   |    0       0
+0     1      1      1     1   |    1       1
+1     0      0      0     0   |    0       0
+1     0      0      0     1   |    1       1
+1     0      0      1     0   |    0       0
+1     0      0      1     1   |    1       1
+1     0      1      0     0   |    0       0
+1     0      1      0     1   |    1       1
+1     0      1      1     0   |    0       0
+1     0      1      1     1   |    1       0
+1     1      0      0     0   |    0       1
+1     1      0      0     1   |    1       1
+1     1      0      1     0   |    0       0
+1     1      0      1     1   |    1       1
+1     1      1      0     0   |    0       1
+1     1      1      0     1   |    1       1
+1     1      1      1     0   |    0       0
+1     1      1      1     1   |    1       0
+
+Logic equation for about truth table
+S0+ = S1
+S1+ = ~TS.S1 + ~NSCar.S1 + ~S0.S1 + TS.EWCar.~S0
+
+List of Output
+NSG : North Sout Green Light
+NSY : North Sout Yellow Light
+NSR : North South Red Light
+EWG : East West Green Light
+EWY : East West Yellow Light
+EWR : East West Red Light
+TR  : Timer restart 
+
+Output Function table
+S0  S1  |   NSG     NSY     NSR     EWG     EWY     EWR     TR
+0   0   |    1       0       0       0       0       1       1
+0   1   |    0       1       0       0       0       1       0
+1   0   |    0       0       1       0       1       0       0
+1   1   |    0       0       1       1       0       0       1
+
+Logic equation for Output function
+NSG = ~S0.~S1
+NSY = ~S0.S1
+NSR = S0
+EWG = S0.S1
+EWY = S0.~S1
+EWR = ~S0
+TR = S0 XNOR S1
