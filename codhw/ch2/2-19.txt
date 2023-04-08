@@ -7,7 +7,7 @@ instruction, as the SHAMT field for R-format instructions is 5 bits,
 allowing for shifts between 0 to 31.)
 sll $t2, $t0, 4
 or $t2, $t2, $t1
-t2 = 0xBABEF678  -- verified by running on simulator
+t2 = 0xBABEFEF8  -- verified by running on simulator
 
 2-19-2
 t2 = 0xAAAAAAA0
