@@ -9,4 +9,10 @@ while (i > 0) {
 }
 
 2-26-3
-5*N
+5*N + 2 (the last two being the last if(i == 0) comparsion at
+the end of the loop). 
+Also note that `subi` is a pseudo-instruction,
+so 5*N + 2 is assuming the `subi` will be assembled as a single
+`addi $t1, $t1, <immediate>` instruction. Some assemblers, like
+the one present in MARS, will expand `subi` into two instructions.
+In that case, the correct answer would be `6*N + 2`.
