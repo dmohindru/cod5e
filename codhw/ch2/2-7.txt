@@ -1,14 +1,14 @@
 Little Endian
-Mem         Data
-0           12
-8           ef
-16          cd
-24          ab
+Mem (byte)         Data
+0                  12
+1                  ef
+2                  cd
+3                  ab
 
 Big Endian
-Mem         Data
-0           ab
-8           cd
-16          ef
-24          12
+Mem (byte)         Data
+0                  ab
+1                  cd
+2                  ef
+3                  12
 
