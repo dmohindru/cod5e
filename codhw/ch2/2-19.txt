@@ -1,9 +1,13 @@
 $t0 = 0xAAAAAAAA, $t1 = 0x12345678
 
 2-19-1
-sll $t2, $t0, 44
+(the exercise in the fifth edition has a "44" shift amount, which
+is a typo. They meant to type just "4". Shifting by 44 is an illegal
+instruction, as the SHAMT field for R-format instructions is 5 bits,
+allowing for shifts between 0 to 31.)
+sll $t2, $t0, 4
 or $t2, $t2, $t1
-t2 = 0xBABEF678  -- verified by running on simulator
+t2 = 0xBABEFEF8  -- verified by running on simulator
 
 2-19-2
 t2 = 0xAAAAAAA0
