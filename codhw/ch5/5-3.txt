@@ -1,0 +1,59 @@
+5.3.1) Offset is 4-0 or 5 bits. We need 2 bits to offset the 4 bytes within a word. 
+Leaves us with 3 bits to address the words inside the block. Which means 2ˆ3 = 8 words.
+
+5.3.2) Index is 9-5 or 5 bits. 2ˆ5 = 32 addresses, thus we have 32 entries (or blocks).
+
+5.3.3) total data size = (8 words * 4 bytes * 32 entries) + (1/8 valid byte + 22/8 tag bytes) * 32 entries = 1024 + 92 = 1116.
+
+Thus, total data size / data size = 1116 / 1024 = 1.0896.
+
+5.3.4) 
+
+First in binary to get a feel of how the bits move:
+
+Address d     Address b	                  	        Tag	                        Index	H or M	 REPLACED
+0	      0000 0000 0000 0000 0000 0000 0000 0000	0000 0000 0000 0000 0000 00	00 000	M	 N
+4	      0000 0000 0000 0000 0000 0000 0000 0100	0000 0000 0000 0000 0000 00	00 000	H	 N
+16	      0000 0000 0000 0000 0000 0000 0001 0000	0000 0000 0000 0000 0000 00	00 000	H	 N
+132	      0000 0000 0000 0000 0000 0000 1000 0100	0000 0000 0000 0000 0000 00	00 100	M	 N
+232	      0000 0000 0000 0000 0000 0000 1110 1000	0000 0000 0000 0000 0000 00	00 111	M	 N
+160	      0000 0000 0000 0000 0000 0000 1010 0000	0000 0000 0000 0000 0000 00	00 101	M	 N
+1024	      0000 0000 0000 0000 0000 0100 0000 0000	0000 0000 0000 0000 0000 01	00 000	M	 Y
+30	      0000 0000 0000 0000 0000 0000 0001 1110	0000 0000 0000 0000 0000 00	00 000	M	 Y
+140	      0000 0000 0000 0000 0000 0000 1000 1100	0000 0000 0000 0000 0000 00	00 100	H	 N
+3100	      0000 0000 0000 0000 0000 1100 0001 1100	0000 0000 0000 0000 0000 11	00 000	M	 Y
+180	      0000 0000 0000 0000 0000 0000 1011 0100	0000 0000 0000 0000 0000 00	00 101	H	 N
+2180	      0000 0000 0000 0000 0000 1000 1000 0100	0000 0000 0000 0000 0000 10	00 100	M	 Y
+
+
+Then using the following equations, do it in decimal (using *integer division*, ie, floor the division after dividing):
+Tag = Address d/(block size * number of blocks) = Address d/(8 words * 4 bytes each * 32 blocks)
+Index = (Address d << # of offset bits) mod (number of blocks) = (Address d/32) mod (32)
+
+Address d	Tag     Index d 	H or M  Replaced
+0	        0	0		M	N
+4		0	0		H	N
+16		0	0		H	N
+132		0	4		M	N
+232		0	7		M	N
+160		0	5		M	N
+1024		1	0		M	Y
+30		0	0		M	Y
+140		0	4		H	N
+3100		3	0		M	Y
+180		0	5		H	N
+2180		2	4		M	Y
+
+4 blocks are replaced (0 thrice and 4).
+
+5.3.5) The hit ratio is (number of hits) / (number of accesses)  = 4/12 = 33%
+
+5.3.6)
+
+Going from top to bottom in the table of 5.3.4)
+
+Tag	Index	Data
+2	4	MEM[2180]
+0	5	MEM[180]
+3	0	MEM[3100]
+0	7	MEM[232]
