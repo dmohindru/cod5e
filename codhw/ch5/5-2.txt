@@ -1,0 +1,58 @@
+5.2.3)
+	        C1 1 word block		C2 2 word block		C3 4 word block	2 offset bits	
+Address	Tag	Index	H or M	Tag	Index	H or M	Tag	Index	H or M
+0000 0011	0000 0	011	M	0000	001	M	000	000	M
+1011 0100	1011 0	100	M	1011	010	M	101	101	M
+0010 1011	0010 1	011	M	0010	101	M	001	101	M
+0000 0010	0000 0	010	M	0000	001	H	000	000	H
+1011 1111	1011 1	111	M	1011	111	M	101	111	M
+0101 1000	0101 1	000	M	0101	100	M	010	110	M
+1011 1110	1011 1	110	M	1011	111	H	101	111	H
+0000 1110	0000 1	110	M	0000	111	M	000	011	M
+1011 0101	1011 0	101	M	1011	010	H	101	101	M
+0010 1100	0010 1	100	M	0010	110	M	001	011	H
+1011 1010	1011 1	010	M	1011	101	H	101	110	M
+1111 1101	1111 1	101	M	1111	110	M	111	111	M
+
+C1 Miss Rate = 100%
+C2 Miss Rate = 8/12 = 67%
+C3 Miss Rate = 9/12 = 75%
+
+C1 cycles	324 = 25 * 12 + 12 * 2
+C2 cycles	236 = 3 * 12 + 25 * 8
+C3 cycles	285 = 5 * 12 + 25 * 9
+
+5.2.4)
+
+We have 32kB/2 words = 32kB/(4 bytes * 2) = 4096 blocks.
+
+Total size of a cache = data size + (valid bit size + tag size) * number of blocks
+
+Log2(4096) = 12 index bits
+1 valid bit
+1 bit for word offset (2 words in a block)
+2 bits for byte offset inside that word (1 word = 4 bytes, so 2ˆ2 choices). 
+
+Tag size = 32 bits - 12 index bits - 1 word offset bit - 2 byte offset bits = 17
+
+Cache size = 32kB + (1 + 17)*4096 = 32kB + (73728 bits) = 32kB + (9216 bytes) = 32kB + 9kB = 41kB = 41984 bytes.
+
+Next part of the exercise:
+
+Tag size = 32 - (index bits + word offset bits + 2 byte offset bits)
+Number of blocks = 2ˆ(index bits)
+Block size = 2ˆ(word offset bits) words or 2^(word offset bits + 2) bytes
+
+Going from 2-word blocks -> 16-word blocks:
+
+Block size = 2ˆ(2 word offset bits) -> 2ˆ(4 word offset bits), so a raise of 3 in the offset bits, such that
+we go from 17 tag bits to 14 tag bits.
+
+Thus, 64 data bytes * block + 14/8 tag bytes * block + 1/8 valid bytes * block >= 41984 bytes
+
+Which gives number of blocks >= 638.5699, rounding up to the nearest gives us 1024 blocks.
+
+1024 blocks * (64 bytes + 14/8 bytes + 1/8 bytes) = 67456 bytes.
+
+Trade-off: larger number of blocks capture temporal locality better, may not capture much spatial locality, as the
+subsequent data has less chance to be within the block (because it's more subdivided).

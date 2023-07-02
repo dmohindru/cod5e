@@ -1,0 +1,50 @@
+5.6.1) 
+Clock rate for P1 = 1 / 0.66e-9 = 1.51GHz
+Clock rate for P2 = 1 / 0.9e-9 = 1.11GHz
+
+5.6.2)
+Average memory access time for P1 = 0.66e-9 + 8% * 70e-9 = 6.26ns
+Average memory access time for P2 = 0.9e-9 + 6% * 70e-9 = 5.1ns
+
+5.6.3)
+Total CPI = Base CPI + (# of memory access instructions / # of instructions) * [(Primary stalls per instruction) + (Secondary stalls per 
+instruction)]
+
+Where for P1:
+	- Base CPI = 1
+	- # of memory access instructions / # of instructions = 0.36
+	- miss rate = 0.08
+	- miss penalty cycles = miss penalty cycle time * clock rate = 70ns * 1.51GHz
+
+Thus, 
+	total CPI for P1 = 1 + (0.36) * (0.08 * 70 / 0.66) = 4.054 CPI
+	total CPI for P2 = 1 + (0.36) * (0.06 * 70 / 0.90) = 2.68 CPI
+
+Making P2 4.054 / 2.68 = 1.512 times faster than P1.
+
+5.6.4) 
+Average Time to Access Memory, AMAT = hit time + miss rate * miss penalty
+
+AMAT with L2 = 0.66ns + 8% * (L2 hit + L2 miss)
+	     = 0.66ns + 8% * [5.62ns + 95% * 70ns]
+	     = 0.66ns + 8% * [5.62ns + 66.5ns]
+	     = 0.66ns + 5.7696
+	     = 6.4296ns
+
+eg, AMAT has become worse by adding a second cache. 
+
+5.6.5)
+Total CPI = Base CPI + (# of memory access instructions / # of instructions) * (Primary stalls per instruction + Secondary stalls per 
+														          instruction) 
+          = 1 + 0.36 * [(0.08 * 6.26 / 0.66) + (0.95 * 6.4296 / 0.66)]
+          = 4.604 average clocks per instruction
+
+5.6.6) 
+
+P2 is still faster (4.604 CPI vs 2.68 CPI). 
+
+The miss rate would need to be 
+L1 miss rate = (Total CPI - Base CPI)/[(# of memory access instructions / # of instructions) * (L2 hit time in cycles + L2 miss penalty 
+in cycles)]
+             = (2.68 - 1)/(0.36 * (5.62ns + 95% * 70ns) * 1.51GHz)
+             = 0.0428 or 4.28%, about half of what is now (8%). 

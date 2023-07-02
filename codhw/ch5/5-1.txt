@@ -1,0 +1,21 @@
+5.1.1) 32 bits = 4 bytes -> 16 bytes / 4 bytes = 4 32-bit integers in 16 bytes.
+
+5.1.2) In the main loop, I, J and B[I][0] are referenced over and over again.
+
+5.1.3) As C stores matrices in a row-major fashion, A[I][J] exhibit spacial locality,
+as the next reference element is going to be A[I][J + 1].
+
+5.1.4) There are 8 * 8000 = 64000 elements in A.
+       There are (assuming B only has one column) 8 elements in B.
+
+Also assuming elements of A and B are 32-bit integers, we would need
+32 * 64008 = 2048256 bits or 256032 bytes, or 256032 / 16 = 16002 blocks of 16 bytes.
+
+5.1.5) Still I, J and B(I,0), which are referenced over and over again.
+
+5.1.6) As MatLab stores matrices in a column-major fashion, now B(I,0) exhibits spatial locality.
+(ie, B(I+1,0) is next in memory of B(I,0)).
+
+The same fact makes A(J,I) exhibit spatial locality, as A(J+1, I) is next in memory to A(J,I).
+
+Note: temporal locality doesn't depend on memory organization. Spatial locality does.
