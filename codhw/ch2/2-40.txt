@@ -1,1 +1,3 @@
-No, since offset in jump instruction cannot be more than 0x0FFFFFFC bytes long.
+No, as the new PC concatenates the first 4 MSB bits of the old PC 0x00000000 (0b0000) 
+with 28 bits of the address (26 bits shifted left by 2), the new PC is limited to 0x0???????
+so 0x20014924 is not accessible.
