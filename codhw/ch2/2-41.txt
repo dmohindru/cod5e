@@ -1,1 +1,6 @@
-No it cannot as it results in jumping 0x80050C90 bytes which is more than 0x0FFFFFFC bytes
+No. Branches address -2^15 to 2^15 - 1 words (or -2^17 to 2^17 - 4 bytes) relative to PC+4 
+
+So, if current PC is 0x00000600 the maximum address in PC would be:
+
+0x00000600 + 0x4    +    0x20000 - 0x4 = 0x00020600  --->  that is less than the desired address of 0x20014924
+(    PC + 4    )         (  2^17 - 4 )

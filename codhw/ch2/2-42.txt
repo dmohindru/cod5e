@@ -1,2 +1,6 @@
-0x20014924 - 0x1FFFf000 = 0x15924
-Yes it can as 0x15924 is well within range of 0x0FFFFFFC bytes.
+Yes. Branches address -2^15 to 2^15 - 1 words (or -2^17 to 2^17 - 4 bytes) relative to PC+4 
+
+So, if current PC is 0x1FFF0000 the maximum address in PC would be:
+
+0x1FFF0000 + 0x4    +    0x20000 - 0x4 = 0x2001F000  --->  that is more than the desired address of 0x20014924
+(    PC + 4    )         (  2^17 - 4 )
