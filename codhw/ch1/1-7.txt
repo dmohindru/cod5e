@@ -37,8 +37,8 @@ c.
    Avg. CPI = 1.1
 
    execution time = 6.0E8 * 1.1 * 1.0E-9 = 0.66 Sec
-   Speed up with comp. to compiler A = 1.1 / 0.66 = 1.67 times (40.00% speed up)
-   Speed up with comp. to compiler B = 1.5 / 0.66 = 2.27 times (51.33% speed up)
+   Speed up with comp. to compiler A = 1.1 / 0.66 = 1.67 times
+   Speed up with comp. to compiler B = 1.5 / 0.66 = 2.27 times
 
 
 
