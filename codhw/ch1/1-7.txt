@@ -17,8 +17,19 @@ a.
 
 b. clock cycle = exec. time / (inst. count * CPI)
    clock rate = (inst. count * CPI) / exec. time
-   clock rate-B/clock rate-A = (inst. count-B * CPI-B) / (inst. count-A * CPI-A)
+   clock rate-B/clock rate-A = (inst. count-B * CPI-B) / (inst. count-A * CPI-A)           [Note bellow]
    clock rate-B/clock rate-A = 1.2E9 * 1.25 / (1.0E9 * 1.1) = 1.36 times
+
+   * Note: The resolution above assumes CPI-A and CPI-B don't change when ran on different
+     processors. This question item just mention different processors, without mentioning
+     if any of the CPIs change. Since CPI can change from implementatin to implementation
+     by exploring better hardware organization like pipeline, cache, multicore ..., a more
+     generic solution depends on the unknown CPIs:
+         clock rate-B/clock rate-A = (inst. count-B * CPI-B) / (inst. count-A * CPI-A)
+         clock rate-B/clock rate-A = (inst. count-B / inst. count-A) * (CPI-B / CPI-A)
+         clock rate-B/clock rate-A = (1.2E9 / 1.0E9) * (CPI-B / CPI-A)
+         clock rate-B/clock rate-A = 1.2 * (CPI-B / CPI-A)
+
 
 c. 
    New Compiler:
@@ -28,6 +39,7 @@ c.
    execution time = 6.0E8 * 1.1 * 1.0E-9 = 0.66 Sec
    Speed up with comp. to compiler A = 1.1 / 0.66 = 1.67 times (40.00% speed up)
    Speed up with comp. to compiler B = 1.5 / 0.66 = 2.27 times (51.33% speed up)
+
 
 
 
