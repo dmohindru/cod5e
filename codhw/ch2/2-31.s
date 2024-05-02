@@ -22,7 +22,7 @@ L2:     addi    $a0, $a0, -1    # compute n = n - 1
         add     $v0, $v0, $s0   # add return value of two previous call
 L3:        
         lw		$a0, 0($sp)     # restore argument n
-        lw      $a0, 4($sp)     # restore a0
+        lw      $s0, 4($sp)     # restore s0
         lw      $ra, 8($sp)     # restore return value
         addi    $sp, $sp, 12    # adjust stack to pop old values
         jr      $ra             # return to caller
